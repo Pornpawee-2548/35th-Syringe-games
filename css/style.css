@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Playpen Sans Thai", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+/* start NAV */
+
+/* ภาพพื้นหลังข้างบน */
+.top-nav {
+    background-image: url(/image/Top-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 100%
+}
+
+/* กล่องเนื้อหาข้างบน */
+.top-content {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 150px;
+    width:auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* กล่องเนื้อหาบนขวา */
+.Home {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* กล่องเนื้อหาด้านบนซ้าย */
+.Emergency {
+    display: flex;
+    margin-left: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* กล่องลิงก์ไป emergency */
+.Emergency li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    
+    img {
+        width: 100px;
+        height: 100px;
+        margin-right: 3px;
+        margin-bottom: -30px;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 600;
+    }
+}
+/* end NAV */
+
+/* start banner */
+.Banner-info {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.Banner-info img {
+    width: 250px;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Timetable {
+    color: white;
+    padding-top: 10px
+}
+
+.Timetable button{
+    border-radius: 8px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.Timetable button:hover {
+    background-color: #a7b1aa;
+}
+/* end banner */
+
+/* start shortcuts */
+.shortcuts {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shortcuts-info {
+    background-color:transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 120px;
+}
+
+.shortcuts-info h2 {
+    margin-bottom: 20px;
+    color: aqua;
+}
+
+.button-shortcuts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin-top: 15px;
+    gap: 15px;
+    padding: 10px;
+}
+
+.button-item {
+    border: none;
+    box-shadow: none;
+}
+
+.button-item a {
+    background-color: #26a69a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+.button-item a:hover {
+    background-color: #1a8a7f;
+}
+
+.button-item a i {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .button-shortcuts {
+        margin-left: 20px;
+        align-items: center;
+    }
+    .button-shortcuts {
+        justify-content: center;
+        gap: 10px;
+    }
+    .button-item a {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+    .button-item a i {
+        font-size: 1.2em;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-shortcuts {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .shortcut-item {
+        width: 100%;
+    }
+}
+/* end shortcuts */
+
+/* start events */
+.Events-title-bar {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    margin-top: -25px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.events-info {
+    background-color: transparent; /* ตามภาพ ไม่ต้องการพื้นหลัง */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%; 
+    box-sizing: border-box;ความกว้าง */
+}
+
+.events-heading h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8em;
+    margin-left: 0;
+}
+
+.events-container { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.events-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.events-post .box-1,
+.events-post .box-2 {
+    background-color: #e0e0e0;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.events-post h3 {
+    font-size: 1.1em;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .event-info {
+        margin-left: 20px;
+    }
+    .events-page-icon {
+        justify-content: center;
+        gap: 15px;
+    }
+    .events-post .box-1,
+    .events-post .box-2 {
+        width: 150px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .events-page-icon {
+        flex-direction: column;
+        align-items: center;
+    }
+    .events-post {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* end event */
+
+/* start contact */
+
+.contact-section {
+    background-color:transparent;
+    display: flex;
+    padding: 20px 20px 20px 50px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-title {
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.contact-content p {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.contact-content a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding-left: 10px;
+    }
+}
+/* end contact */
