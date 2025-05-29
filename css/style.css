@@ -7,7 +7,27 @@
     font-style: normal;
 }
 
+body {
+    margin: 0; /* ลบ margin เริ่มต้นของ body */
+    padding: 0; /* ลบ padding เริ่มต้นของ body */
+    box-sizing: border-box;
+}
+
 /* start NAV */
+
+nav {
+    width: 100%; /* ให้ nav กว้างเต็มหน้าจอ */
+    background-color: #66bb6a; /* สีพื้นหลังที่คุณใช้อยู่ (จากรูป) */
+    color: white; /* สีข้อความใน nav */
+    padding: 10px 0; /* เพิ่ม padding บน-ล่างเล็กน้อย */
+    position: fixed; /* ทำให้ nav ลอยอยู่กับที่เมื่อเลื่อนหน้าจอ */
+    top: 0; /* จัดให้อยู่ด้านบนสุดของหน้าจอ */
+    left: 0; /* จัดให้อยู่ด้านซ้ายสุดของหน้าจอ */
+    z-index: 1000; /* กำหนด layer ให้ nav อยู่บนสุด (ถ้ามี element อื่นๆ ทับ) */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* เพิ่มเงาเล็กน้อยเพื่อให้ดูมีมิติ */
+}
+
+
 
 /* ภาพพื้นหลังข้างบน */
 .top-nav {
@@ -15,6 +35,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; 
     height: 150px;
     width: 100%
 }
@@ -31,10 +57,11 @@
 }
 
 /* กล่องเนื้อหาบนขวา */
-.Home {
+.Home h1 {
     color: white;
     font-size: 30px;
     font-weight: 600;
+    margin: 0;
 }
 
 /* กล่องเนื้อหาด้านบนซ้าย */
