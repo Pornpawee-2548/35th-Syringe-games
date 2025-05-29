@@ -16,7 +16,7 @@ body {
 /* start NAV */
 /* ภาพพื้นหลังข้างบน */
 .top-nav {
-    background-image: url(/image/Top-bg.png);
+    background-image: url('../image/Top-bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
