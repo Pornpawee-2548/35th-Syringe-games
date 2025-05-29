@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-site-cache-v1';
+const CACHE_NAME = 'my-syringe-games-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -7,6 +7,8 @@ const urlsToCache = [
   '/scripts/app.js',
   '/image/logo.png',
   '/image/sos.png',
+  '/image/icon-192x192.png',
+  '/image/icon-512x512.png',
   '/image/Top-bg.png'
 ];
 
