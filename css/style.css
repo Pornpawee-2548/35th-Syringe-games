@@ -14,33 +14,19 @@ body {
 }
 
 /* start NAV */
-
-
 /* ภาพพื้นหลังข้างบน */
 .top-nav {
     background-image: url(/image/Top-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
+    height: 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px; 
-    height: 150px;
-    width: 100%
-}
-
-/* กล่องเนื้อหาข้างบน */
-.top-content {
-    display: flex;
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 150px;
-    width:auto;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0 60px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* กล่องเนื้อหาบนขวา */
@@ -51,33 +37,35 @@ body {
     margin: 0;
 }
 
+.Home h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
 /* กล่องเนื้อหาด้านบนซ้าย */
-.Emergency {
-    display: flex;
-    margin-left: 20px;
-    justify-content: center;
-    padding: 10px;
+.Emergency ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* กล่องลิงก์ไป emergency */
-.Emergency li {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    
-    img {
-        width: 100px;
-        height: 100px;
-        margin-right: 3px;
-        margin-bottom: -30px;
-    }
+.Emergency ul li img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: -20px;
+}
 
-    a {
-        color: black;
-        text-decoration: none;
-        font-size: 25px;
-        font-weight: 600;
-    }
+.Emergency ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 100px;
 }
 /* end NAV */
 
@@ -146,7 +134,7 @@ body {
     justify-content:center;
     margin-top: 15px;
     gap: 15px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .button-item {
