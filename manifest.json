@@ -1,0 +1,21 @@
+{
+  "name": "35th-Syringe-Games",
+  "short_name": "35th-Syringe-Games",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "description": "จัดทำขึ้นเพื่อใช้กิจกรรม 35th Syringe Games",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    },
+    {
+      "src": "images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
