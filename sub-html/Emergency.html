@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency</title>
+    
+    <link rel="stylesheet" href="../css/sub-style.css"> 
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Thai:wght@100..800&display=swap" rel="stylesheet">
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="../image/logo.png">
+    <link rel="icon" type="image/png" href="../image/logo.png">
+
+</head>
+<body>
+
+    <header class="sub-page-header">
+        <a href="javascript:history.back()" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <h1>Emergency</h1>
+    </header>
+
+    <main class="sub-page-main-content">
+        <div class="contact-card">
+            <div class="contact-info">
+                <h3>PSU Emergency Services Center</h3>
+                <p>+667-428-2888</p>
+            </div>
+            <a href="tel:+6674282888" class="phone-icon">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-info">
+                <h3>PSU Security Center</h3>
+                <p>+667-428-2191</p>
+            </div>
+            <a href="tel:+6674282191" class="phone-icon">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-info">
+                <h3>Khohong Police Station</h3>
+                <p>+667-421-1411</p>
+            </div>
+            <a href="tel:+6674211411" class="phone-icon">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+        </div>
+        
+        </main>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+    <script src="../scripts/app.js"></script> 
+
+</body>
+</html>

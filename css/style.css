@@ -9,10 +9,11 @@
 }
 
 body {
-    margin: 0; /* ลบ margin เริ่มต้นของ body */
-    padding: 0; /* ลบ padding เริ่มต้นของ body */
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    padding-bottom: 150px;
 }
 
 img, video {
@@ -28,6 +29,8 @@ img, video {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 
     width: 100%;
     max-width: 100vw;
@@ -103,19 +106,26 @@ img, video {
     align-items: center;
 }
 
-.Timetable {
+.Timetable a {
+    background-color: #26a69a;
     color: white;
-    padding-top: 10px
-}
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-decoration: none;
+    margin-top: 10px;
 
-.Timetable button{
-    border-radius: 8px;
-    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background-color 0.3s ease;
+    outline: none;
 }
 
-.Timetable button:hover {
-    background-color: #a7b1aa;
+.Timetable a:hover {
+    background-color: #1a8a7f;
 }
 /* end banner */
 
@@ -339,32 +349,81 @@ img, video {
 
 /* start menu */
 .menu-all {
-    background-image: usl=('../image/Bottom-bg.png');
+    background-image: url('../image/Bottom-bg.png');
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
     gap: 20px;
     padding: 20px 0;
+    box-sizing: border-box;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    justify-content: space-around;
+    align-items: center;
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px
 }
 
-.menu-container a {
+.menu-all a {
     background-color: transparent;
-    color: #333;
+    color: white;
 
     min-width: 140px; 
     text-align: center;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.9vw;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
+    padding: 5px 5px; 
 }
 
-.button-item a:hover {
-    background-color: #26a69a;
-    color: white;
+.menu-all a i {
+    margin-bottom: 2px;
 }
+
+.menu-all a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .menu-all {
+        gap: 10px;
+        padding: 15px 0;
+    }
+    .menu-all a {
+        font-size: 0.9em;
+        min-width: 100px;
+        padding: 3px 3px;
+    }
+    .menu-all a i {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-all {
+        gap: 2px;
+        padding: 10px 0;
+    }
+     .menu-all a {
+        font-size: 0.7em;
+        min-width: unset;
+        padding: 5px 2px;
+    }
+    .menu-all a i {
+        font-size: 1.2em;
+        margin-bottom: 3px;
+    }
+}
+/* end menu */

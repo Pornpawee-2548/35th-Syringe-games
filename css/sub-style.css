@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Playpen Sans Thai", cursive; 
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; 
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sub-page-header {
+    background-image: url('../image/Top-bg.png');
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-height: 80px;
+}
+
+.sub-page-header .back-button {
+    position: absolute;
+    left: 20px;
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.sub-page-header h1 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    .sub-page-header {
+        padding: 15px;
+        min-height: 70px;
+    }
+    .sub-page-header .back-button {
+        left: 15px;
+        font-size: 1.3em;
+    }
+    .sub-page-header h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .sub-page-header {
+        padding: 10px;
+        min-height: 60px;
+    }
+    .sub-page-header .back-button {
+        left: 10px;
+        font-size: 1.2em;
+    }
+    .sub-page-header h1 {
+        font-size: 1.3em;
+    }
+}
+
+/*  Main Content Area */
+.sub-page-main-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* Emergency Page Specific Styles */
+/* start Emergency */
+.contact-card {
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.contact-card:last-child {
+    border-bottom: none;
+}
+
+.contact-card:hover {
+    background-color: #f9f9f9;
+}
+
+.contact-info h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0;
+}
+
+.phone-icon {
+    color: #e74c3c;
+    font-size: 1.8em;
+    text-decoration: none;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-icon i {
+    pointer-events: none;
+}
+
+/* Responsive Emergency Page */
+@media (max-width: 768px) {
+    .sub-page-main-content {
+        padding: 15px;
+    }
+    .contact-card {
+        padding: 12px 15px;
+    }
+    .contact-info h3 {
+        font-size: 1em;
+    }
+    .contact-info p {
+        font-size: 0.85em;
+    }
+    .phone-icon {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 480px) {
+    .sub-page-main-content {
+        padding: 10px;
+    }
+    .contact-card {
+        padding: 10px 10px;
+    }
+    .contact-info h3 {
+        font-size: 0.9em;
+    }
+    .contact-info p {
+        font-size: 0.8em;
+    }
+    .phone-icon {
+        font-size: 1.5em;
+    }
+}
+/* end Emergency */
