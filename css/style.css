@@ -5,12 +5,20 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    box-sizing: border-box;
 }
 
 body {
     margin: 0; /* ลบ margin เริ่มต้นของ body */
     padding: 0; /* ลบ padding เริ่มต้นของ body */
     box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* start NAV */
@@ -20,12 +28,18 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
     width: 100%;
+    max-width: 100vw;
     height: 150px;
+    overflow: hidden;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 0 60px;
+    box-sizing: border-box;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
@@ -75,6 +89,8 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px;
+    max-width: 100vw;
+    box-sizing: border-box;
 }
 
 .Banner-info img {
@@ -203,21 +219,21 @@ body {
 .Events-title-bar {
     background-color: #f0f0f0;
     padding: 10px;
-    text-align: center;
     margin-top: -25px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-left: calc(-50vw + 50%);
+    align-items: center
 }
 
 .events-info {
-    background-color: transparent; /* ตามภาพ ไม่ต้องการพื้นหลัง */
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     padding: 20px;
     margin-top: 20px;
-    width: 100%; 
+    width: 100vw; 
     box-sizing: border-box;
 }
 
@@ -321,3 +337,35 @@ body {
     }
 }
 /* end contact */
+
+/* start menu */
+.menu-all {
+    background-image: usl=('../image/Bottom-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.menu-container a {
+    background-color: transparent;
+    color: #333;
+
+    min-width: 140px; 
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease; 
+}
+
+.button-item a:hover {
+    background-color: #26a69a;
+    color: white;
+}
