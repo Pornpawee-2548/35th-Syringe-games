@@ -65,7 +65,11 @@ img, video {
 
 /* กล่องเนื้อหาด้านบนซ้าย */
 .Emergency ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     list-style: none;
+    justify-content: center;
     padding: 0;
     margin: 0;
 }
@@ -74,7 +78,7 @@ img, video {
 .Emergency ul li img {
     width: 100px;
     height: 100px;
-    margin-bottom: -20px;
+    margin-bottom: -10px;
 }
 
 .Emergency ul li a {
@@ -86,6 +90,7 @@ img, video {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    line-height: 1;
 }
 /* end NAV */
 
@@ -98,6 +103,7 @@ img, video {
     padding: 10px;
     max-width: 100vw;
     box-sizing: border-box;
+    gap: 15px;
 }
 
 .Banner-info img {
@@ -110,7 +116,6 @@ img, video {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: 10px;
 }
 
 .banner-content h1,
@@ -167,9 +172,6 @@ img, video {
     .Banner-info img {
         width: 180px;
     }
-    .banner-content {
-        margin-left: 15px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -177,6 +179,7 @@ img, video {
         flex-direction: column;
         align-items: center;
         padding: 5px;
+        gap: 0;
     }
     .Banner-logo {
         margin-bottom: 5px;
