@@ -442,7 +442,7 @@ img, video {
     .Emergency ul li img {
         width: 80px;
         height: 80px;
-        margin-bottom: 5px;
+        margin-bottom: 2px;
     }
     .Emergency ul li a {
         font-size: 20px;
@@ -460,7 +460,7 @@ img, video {
     .Emergency ul li img {
         width: 60px;
         height: 60px;
-        margin-bottom: 5px;
+        margin-bottom: 2px;
     }
     .Emergency ul li a {
         font-size: 16px;
