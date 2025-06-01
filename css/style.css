@@ -110,6 +110,25 @@ img, video {
     align-items: center;
 }
 
+.banner-content h1,
+.banner-content h3 {
+    width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-content h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.banner-content h3 {
+    font-size: 1.2em;
+    color: #555;
+}
+
 .Timetable a {
     background-color: #26a69a;
     color: white;
@@ -130,6 +149,37 @@ img, video {
 
 .Timetable a:hover {
     background-color: #1a8a7f;
+}
+
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 1.5em;
+    }
+    .banner-content h3 {
+        font-size: 1em;
+    }
+    .Banner-info img {
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-content h1 {
+        font-size: 1.2em;
+    }
+    .banner-content h3 {
+        font-size: 0.9em;
+    }
+    .Banner-info img {
+        width: 120px;
+    }
+    .Banner-info {
+        padding: 10px;
+        flex-direction: column;
+    }
+    .Banner-logo {
+        margin-bottom: 10px;
+    }
 }
 /* end banner */
 
