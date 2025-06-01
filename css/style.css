@@ -9,11 +9,16 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     overflow-x: hidden;
-    padding-bottom: 150px;
+    padding-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.container {
+    flex-grow: 1;
 }
 
 img, video {
