@@ -94,6 +94,7 @@ img, video {
     background-color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px;
     max-width: 100vw;
     box-sizing: border-box;
@@ -109,6 +110,7 @@ img, video {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-left: 20px;
 }
 
 .banner-content h1,
@@ -135,9 +137,9 @@ img, video {
     color: white;
     border: none;
     border-radius: 10px;
-    padding: 5px 20px;
+    padding: 2px 20px;
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: 1em;
     text-decoration: none;
     margin-top: 10px;
 
@@ -159,12 +161,30 @@ img, video {
     .banner-content h3 {
         font-size: 1em;
     }
+    .Timetable a h3 {
+        font-size: 1.1em;
+    }
     .Banner-info img {
         width: 180px;
+    }
+    .banner-content {
+        margin-left: 15px;
     }
 }
 
 @media (max-width: 480px) {
+    .Banner-info {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .Banner-logo {
+        margin-bottom: 10px;
+    }
+    .banner-content {
+        margin-left: 0;
+        margin-top: 10px;
+    }
     .banner-content h1 {
         font-size: 1.2em;
     }
