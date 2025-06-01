@@ -208,7 +208,7 @@ img, video {
 /* --- Responsive Adjustments --- */
 
 @media (max-width: 768px) {
-    .top-nav { /* Responsive สำหรับ top-nav */
+    .top-nav {
         padding: 0 20px;
         height: 130px;
     }
@@ -254,7 +254,7 @@ img, video {
 
 @media (max-width: 480px) {
     .top-nav { /* Responsive สำหรับ top-nav */
-        padding: 0 15px;
+        padding: 0 5px;
         height: 100px;
     }
     .Home h1 {
