@@ -108,15 +108,16 @@ img, video {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .banner-content h1,
 .banner-content h3 {
-    width: 100%;
-    white-space: normal;
-    word-break: break-word;
     margin: 0;
     padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .banner-content h1 {
@@ -125,8 +126,8 @@ img, video {
 }
 
 .banner-content h3 {
-    font-size: 1.2em;
-    color: #555;
+    font-size: 1.3em;
+    color: #000000;
 }
 
 .Timetable a {
@@ -193,7 +194,7 @@ img, video {
 }
 
 .shortcuts-info {
-    background-color:transparent;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
