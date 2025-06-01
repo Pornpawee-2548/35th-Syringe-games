@@ -186,8 +186,8 @@ img, video {
     }
     .banner-content {
         margin-left: 0;
-        margin-top: 10px;
-        margin-bottom: 5px;
+        margin-top: 5px;
+        margin-bottom: 0;
     }
     .banner-content h1 {
         font-size: 1.2em;
