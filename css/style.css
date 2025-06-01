@@ -65,11 +65,7 @@ img, video {
 
 /* กล่องเนื้อหาด้านบนซ้าย */
 .Emergency ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     list-style: none;
-    justify-content: center;
     padding: 0;
     margin: 0;
 }
@@ -179,7 +175,7 @@ img, video {
         flex-direction: column;
         align-items: center;
         padding: 5px;
-        gap: 0;
+        gap: -15px;
     }
     .Banner-logo {
         margin-bottom: 5px;
@@ -528,7 +524,6 @@ img, video {
     .Emergency ul li img {
         width: 60px;
         height: 60px;
-        margin-bottom: 2px;
     }
     .Emergency ul li a {
         font-size: 16px;
