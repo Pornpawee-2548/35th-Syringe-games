@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games-style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Thai:wght@100..800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 
     <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="image/logo.png">
     <link rel="apple-touch-icon" sizes="152x152" href="image/logo.png">
@@ -21,46 +23,138 @@
 
 </head>
 <body>
-    <!-- Nav Start -->
-    <nav>
-        <div class="top-nav">
+
+    <div class="container">
+        <header class="top-nav">
             <div class="Home">
                 <h1>Games</h1>
             </div>
             <div class="Emergency">
                 <ul>
                     <li>
-                        <a href="/sub-html/Emergency.html">
-                            <img src="image/sos.png" alt="">
+                        <a href="sub-html/Emergency.html">
+                            <img src="image/sos.png" alt="Emergency">
                             Emergency
                         </a>
                     </li>
                 </ul>
             </div>
-        </div>
-    </nav>
-    <!-- Nav End -->
+        </header>
 
-        <!-- start menu -->
-     <div class="menu-all">
-        <a href="index.html">
+        <section class="game-categories">
+            <div class="category-scroll-wrapper">
+                <a href="Sport/ทั้งหมด.html" class="category-item all-games-active">
+                    <span class="material-symbols-outlined category-icon">flag</span> <span class="category-text">ทั้งหมด</span>
+                </a>
+                <a href="Sport/หมากกระดาน.html" class="category-item">
+                    <span class="material-symbols-outlined">chess</span> <span class="category-text">หมาก<br>กระดาน</span>
+                </a>
+                <a href="Sport/ฟุตบอล.html" class="category-item">
+                    <span class="material-symbols-outlined category-icon">sports_soccer</span> <span class="category-text">ฟุตบอล</span>
+                </a>
+                <a href="Sport/เปตอง.html" class="category-item">
+                    <span class="material-symbols-outlined category-icon">sports_baseball</span> <span class="category-text">เปตอง</span>
+                </a>
+                <a href="Sport/กรีฑา.html" class="category-item">
+                    <span class="material-symbols-outlined category-icon">directions_run</span> <span class="category-text">กรีฑา</span>
+                </a>
+                <a href="Sport/วอลเลย์บอล.html" class="category-item">
+                    <span class="material-symbols-outlined category-icon">sports_volleyball</span> <span class="category-text">วอลเลย์<br>บอล</span>
+                </a>
+                <a href="Sport/ROV.html" class="category-item">
+                    <span class="material-symbols-outlined category-icon">stadia_controller</span> <span class="category-text">ROV</span>
+                </a>
+                <a href="Sport/บริดจ์.html" class="category-item">
+                    <span class="material-symbols-outlined category-icon">poker_chip</span> <span class="category-text">บริดจ์</span>
+                </a>
+                <a href="Sport/บาสเกตบอล.html" class="category-item">
+                    <span class="material-symbols-outlined category-icon">sports_basketball</span> <span class="category-text">บาสเกต<br>บอล</span>
+                </a>
+                <a href="Sport/แบดมินตัน.html" class="category-item">
+                    <span class="material-symbols-outlined">sports</span><span class="category-text">แบดมินตัน</span>
+                </a>
+                <a href="Sport/ปิงปอง.html" class="category-item">
+                    <span class="material-symbols-outlined category-icon">sports_tennis</span> <span class="category-text">ปิงปอง</span>
+                </a>
+                <a href="Sport/ว่ายน้ำ.html" class="category-item">
+                    <span class="material-symbols-outlined category-icon">pool</span> <span class="category-text">ว่ายน้ำ</span>
+                </a>
+                <a href="Sport/เทนนิส.html" class="category-item">
+                    <span class="material-symbols-outlined category-icon">sports_tennis</span> <span class="category-text">เทนนิส</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="game-filters">
+            <button class="filter-button active" id="filter-all">ทั้งหมด</button>
+            <button class="filter-button" id="filter-live">กำลังแข่งขัน</button>
+        </section>
+
+        <section class="game-list-content">
+            <p style="text-align: center; margin-top: 50px; color: #666;">
+                เนื้อหาเกมส์จะแสดงที่นี่ (เกมส์ทั้งหมด หรือ เกมส์ที่กำลังแข่งขัน)
+            </p>
+        </section>
+    </div>
+
+    <nav class="menu-all">
+        <a href="index.html" class="nav-item">
             <i class="fa-solid fa-house"></i>
             <span>Home</span>
         </a>
-        <a href="Games.html">
+        <a href="Games.html" class="nav-item active">
             <i class="fa-solid fa-medal"></i>
             <span>Games</span>
         </a>
-        <a href="Map.html">
+        <a href="Map.html" class="nav-item">
             <i class="fa-solid fa-map-location"></i>
             <span>Map</span>
         </a>
-        <a href="announce.html">
+        <a href="announce.html" class="nav-item">
             <i class="fa-solid fa-envelope"></i>
             <span>Announce</span>
         </a>
-    </div>
-     <!-- end menu -->
-    
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterAllBtn = document.getElementById('filter-all');
+            const filterLiveBtn = document.getElementById('filter-live');
+            const gameListContent = document.querySelector('.game-list-content');
+
+            loadGameContent('all'); // Load all games initially
+
+            filterAllBtn.addEventListener('click', () => {
+                filterLiveBtn.classList.remove('active');
+                filterAllBtn.classList.add('active');
+                loadGameContent('all');
+            });
+
+            filterLiveBtn.addEventListener('click', () => {
+                filterAllBtn.classList.remove('active');
+                filterLiveBtn.classList.add('active');
+                loadGameContent('live');
+            });
+
+            function loadGameContent(filterType) {
+                if (filterType === 'all') {
+                    gameListContent.innerHTML = '<p style="text-align: center; margin-top: 50px; color: #666;">เนื้อหาเกมส์ทั้งหมดจะแสดงที่นี่</p>';
+                } else if (filterType === 'live') {
+                    gameListContent.innerHTML = '<p style="text-align: center; margin-top: 50px; color: #666;">เนื้อหาเกมส์ที่กำลังแข่งขันจะแสดงที่นี่</p>';
+                }
+            }
+
+            // Highlight the correct bottom-nav item based on current page
+            const currentPath = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.menu-all .nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === currentPath) {
+                    item.classList.add('active');
+                } else if (currentPath === '' && item.getAttribute('href') === 'index.html') {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>

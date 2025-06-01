@@ -1,0 +1,421 @@
+/* Styles specific to Games.html */
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Playpen Sans Thai", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    /* padding-bottom: 150px; ปรับให้เว้นที่ว่างให้ bottom nav bar */
+    padding-bottom: 70px; /* ความสูงของ bottom nav bar คือ 60px + เผื่อเล็กน้อย */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f2f5; /* เพิ่มสีพื้นหลังเพื่อให้ดูดี */
+}
+
+/* Main content container - ช่วยให้เนื้อหาไม่ถูก bottom nav บัง */
+.container {
+    flex-grow: 1; /* ทำให้เนื้อหาหลักขยายกินพื้นที่ที่เหลือ */
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* start top NAV */
+.top-nav {
+    background-image: url('../image/Top-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    width: 100%;
+    max-width: 100vw;
+    height: 150px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 60px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* กล่องเนื้อหาบนขวา */
+.Home h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.Home h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* กล่องเนื้อหาด้านบนซ้าย */
+.Emergency ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* กล่องลิงก์ไป emergency */
+.Emergency ul li img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: -20px;
+}
+
+.Emergency ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* end top NAV */
+
+/* --- Game Categories Section --- */
+.game-categories {
+    padding: 15px 0;
+    background-color: #f0f2f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #eee;
+}
+
+.category-scroll-wrapper {
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 15px;
+    gap: 15px;
+    scrollbar-width: none;
+}
+.category-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    min-width: 90px;
+    max-width: 90px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.category-item:active {
+    transform: scale(0.95);
+}
+
+.category-item.all-games-active {
+    border: 2px solid #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Material Symbols specific styles */
+.category-icon {
+    font-family: 'Material Symbols Outlined'; /* กำหนด font-family สำหรับ Material Symbols */
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px; /* กำหนดขนาดของ icon ด้วย font-size */
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga'; 
+
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    color: #333; /* กำหนดสีของ icon */
+    margin-bottom: 5px;
+
+    /* Material Symbols customizable properties */
+    font-variation-settings:
+        'FILL' 0, /* 0-1, 0=outline, 1=filled */
+        'wght' 400, /* 100-700, 400 is default */
+        'GRAD' 0, /* -25-200, 0 is default */
+        'opsz' 48; /* 20-48, 48 is default */
+}
+
+.category-text {
+    font-size: 15px;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+/* --- Game Filter Buttons --- */
+.game-filters {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #f0f2f5; /* สีพื้นหลังเหมือน body */
+    border-bottom: 1px solid #eee;
+}
+
+.filter-button {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 25px;
+    margin: 0 5px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-button.active {
+    background-color: #6bb96b; /* สีเขียวตามภาพตัวอย่าง */
+    color: white;
+}
+
+/* --- Game List/Content Area (Placeholder) --- */
+.game-list-content {
+    padding: 20px;
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 768px) {
+    .top-nav { /* Responsive สำหรับ top-nav */
+        padding: 0 20px;
+        height: 130px;
+    }
+    .Home h1 {
+        font-size: 28px;
+    }
+    .Emergency ul li img {
+        width: 80px;
+        height: 80px;
+    }
+    .Emergency ul li a {
+        font-size: 20px;
+    }
+
+    .game-categories {
+        padding: 10px 0;
+    }
+    .category-scroll-wrapper {
+        padding: 0 10px;
+        gap: 10px;
+    }
+    .category-item {
+        min-width: 80px;
+        max-width: 80px;
+        padding: 8px 4px;
+    }
+    .category-icon {
+        font-size: 35px; /* ปรับขนาด icon ใน responsive */
+        font-variation-settings: 'opsz' 35; /* ปรับ optical size ตามขนาด font */
+    }
+    .category-text {
+        font-size: 14px;
+    }
+
+    .game-filters {
+        padding: 15px 0;
+    }
+    .filter-button {
+        padding: 8px 20px;
+        font-size: 15px;
+    }
+
+    .menu-all { /* Responsive สำหรับ bottom nav */
+        gap: 10px;
+        padding: 15px 0;
+        height: 55px; /* ปรับความสูง */
+    }
+    .menu-all a {
+        font-size: 0.9em;
+        /* min-width: 100px; */ /* ไม่จำเป็นต้องมีถ้า flex: 1 */
+        padding: 3px 3px;
+    }
+    .menu-all a i {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-nav { /* Responsive สำหรับ top-nav */
+        padding: 0 15px;
+        height: 100px;
+    }
+    .Home h1 {
+        font-size: 24px;
+    }
+    .Emergency ul li img {
+        width: 60px;
+        height: 60px;
+    }
+    .Emergency ul li a {
+        font-size: 16px;
+    }
+
+    .game-categories {
+        padding: 8px 0;
+    }
+    .category-scroll-wrapper {
+        padding: 0 8px;
+        gap: 8px;
+    }
+    .category-item {
+        min-width: 75px;
+        max-width: 75px;
+        padding: 6px 3px;
+    }
+    .category-icon {
+        font-size: 30px; /* ปรับขนาด icon ใน responsive */
+        font-variation-settings: 'opsz' 30; /* ปรับ optical size ตามขนาด font */
+    }
+    .category-text {
+        font-size: 13px;
+    }
+
+    .game-filters {
+        padding: 10px 0;
+    }
+    .filter-button {
+        padding: 7px 18px;
+        font-size: 14px;
+    }
+
+    .menu-all { /* Responsive สำหรับ bottom nav */
+        gap: 2px;
+        padding: 10px 0;
+        height: 50px; /* ปรับความสูง */
+    }
+    .menu-all a {
+        font-size: 0.7em;
+        padding: 5px 2px;
+    }
+    .menu-all a i {
+        font-size: 1.2em;
+        margin-bottom: 3px;
+    }
+}
+
+/* start menu */
+.menu-all {
+    background-image: url('../image/Bottom-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px 0;
+    box-sizing: border-box;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    justify-content: space-around;
+    align-items: center;
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px
+}
+
+.menu-all a {
+    background-color: transparent;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.9vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    transition: all 0.3s ease;
+    padding: 5px 5px; 
+}
+
+.menu-all a i {
+    margin-bottom: 2px;
+}
+
+.menu-all a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .menu-all {
+        gap: 10px;
+        padding: 15px 0;
+    }
+    .menu-all a {
+        font-size: 0.9em;
+        min-width: 100px;
+        padding: 3px 3px;
+    }
+    .menu-all a i {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-all {
+        gap: 2px;
+        padding: 10px 0;
+    }
+     .menu-all a {
+        font-size: 0.7em;
+        min-width: unset;
+        padding: 5px 2px;
+    }
+    .menu-all a i {
+        font-size: 1.2em;
+        margin-bottom: 3px;
+    }
+}
+/* end menu */
+
+.category-icon {
+    /* ถ้าเป็น Font Awesome icon: */
+    font-size: 40px;
+    margin-bottom: 5px;
+    color: #333;
+
+    /* ถ้าเป็นรูปภาพ icon (uncomment บรรทัดด้านล่างเมื่อใช้รูปภาพ): */
+    /* width: 40px; */
+    /* height: 40px; */
+    /* margin-bottom: 5px; */
+}
