@@ -12,17 +12,15 @@
 
 body {
     overflow-x: hidden;
-    /* padding-bottom: 150px; ปรับให้เว้นที่ว่างให้ bottom nav bar */
-    padding-bottom: 70px; /* ความสูงของ bottom nav bar คือ 60px + เผื่อเล็กน้อย */
+    padding-bottom: 70px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f0f2f5; /* เพิ่มสีพื้นหลังเพื่อให้ดูดี */
+    background-color: #f0f2f5;
 }
 
-/* Main content container - ช่วยให้เนื้อหาไม่ถูก bottom nav บัง */
 .container {
-    flex-grow: 1; /* ทำให้เนื้อหาหลักขยายกินพื้นที่ที่เหลือ */
+    flex-grow: 1;
 }
 
 img, video {
@@ -253,20 +251,6 @@ img, video {
         padding: 8px 20px;
         font-size: 15px;
     }
-
-    .menu-all { /* Responsive สำหรับ bottom nav */
-        gap: 10px;
-        padding: 15px 0;
-        height: 55px; /* ปรับความสูง */
-    }
-    .menu-all a {
-        font-size: 0.9em;
-        /* min-width: 100px; */ /* ไม่จำเป็นต้องมีถ้า flex: 1 */
-        padding: 3px 3px;
-    }
-    .menu-all a i {
-        font-size: 1.2em;
-    }
 }
 
 @media (max-width: 480px) {
@@ -311,20 +295,6 @@ img, video {
     .filter-button {
         padding: 7px 18px;
         font-size: 14px;
-    }
-
-    .menu-all { /* Responsive สำหรับ bottom nav */
-        gap: 2px;
-        padding: 10px 0;
-        height: 50px; /* ปรับความสูง */
-    }
-    .menu-all a {
-        font-size: 0.7em;
-        padding: 5px 2px;
-    }
-    .menu-all a i {
-        font-size: 1.2em;
-        margin-bottom: 3px;
     }
 }
 
@@ -419,3 +389,33 @@ img, video {
     /* height: 40px; */
     /* margin-bottom: 5px; */
 }
+
+@media (max-width: 768px) {
+    .menu-all {
+        gap: 10px;
+        padding: 15px 0;
+    }
+    .menu-all a {
+        font-size: 0.9em;
+        min-width: 100px;
+        padding: 3px 3px;
+    }
+    .menu-all a i {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-all {
+        gap: 2px;
+        padding: 10px 0;
+    }
+     .menu-all a {
+        font-size: 0.7em;
+        min-width: unset;
+        padding: 5px 2px;
+    }
+    .menu-all a i {
+        font-size: 1.2em;
+        margin-bottom: 3px;
+    }
